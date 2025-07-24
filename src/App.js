@@ -89,10 +89,11 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col font-serif bg-gray-50 text-gray-800">
     <Navbar />
-    <main className="flex-1 px-8 py-6 max-w-3xl mx-auto">
+    <main className="flex-1 px-8 py-6 max-w-3xl mx-auto pl-10">
     <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4 mb-6">
-    <input
-    className="flex-1 p-4 border rounded-lg text-lg placeholder-gray-500"
+    <textarea
+    rows={6}
+    className="flex-1 p-4 border rounded-lg text-lg placeholder-gray-500 resize-y"
     placeholder="Escribe tu pregunta..."
     value={query}
     onChange={(e) => setQuery(e.target.value)}
